@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load pagination-tags %}
+{% block title %}{{ site.name }}{% endblock %}
+
+{% block content %}
+
+<div class="module">
+	<h2>{% trans "Patients" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Patient" %}</th>
+				<th scope="col">{% trans "First Name" %}</th>
+				<th scope="col">{% trans "Last Name" %}</th>
+				<th scope="col">{% trans "Gender" %}</th>
+				<th scope="col">{% trans "Phone Number" %}</th>
+				<th scope="col">{% trans "State" %}</th>
+				<th scope="col">{% trans "Active" %}</th>
+				<th scope="col">{% trans "Subscribed" %}</th>
+			</tr>
+		</thead>
+		<tbody>{% if patients.object_list %}{% for patient in patients.object_list %}
+			<!-- Do not show reporters without connections, since they're useless -->
+			{% if patient.connection.identity %}
+			<tr>
+				<td><a href="/patient/{{ patient.pk }}">{{ patient }}</a></td>
+                <td>{% if patient.first_name %}{{ patient.first_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.last_name %}{{ patient.last_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.gender %}{{ patient.gender }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.connection %}{{ patient.connection.identity }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.state %}{{ patient.state }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.active %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}</td>
+                <td>{% if patient.subscribed %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}</td>
+			</tr>{% endif %}{% endfor %}{% else %}
+			<tr class="no-data">
+				<td colspan="8">
+					{% trans "No patients yet" %}
+					<!--<a href="/patient/add" class="add">
+						{% trans "Add a Patient" %}
+					</a>-->
+				</td>
+			</tr>{% endif %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="8">
+					{% paginator patients %}
+				</td>
+			</tr>
+		</tfoot>
+		<!--
+		<div class="toolbar">
+			<a href="/patient/add" class="add">{% trans "Add a Patient" %}</a>
+		</div>
+		-->
+	</table>
+
+	<h2>{% trans "Nurses" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Nurse" %}</th>
+				<th scope="col">{% trans "First Name" %}</th>
+				<th scope="col">{% trans "Last Name" %}</th>
+				<th scope="col">{% trans "Phone Number" %}</th>
+			</tr>
+		</thead>
+		<tbody>{% if nurses.object_list %}{% for nurse in nurses.object_list %}
+			{% if nurse.connection.identity %}
+			<tr>
+				<td><a href="/nurse/{{ nurse.pk }}">{{ nurse }}</a></td>
+                <td>{% if nurse.first_name %}{{ nurse.first_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if nurse.family_name %}{{ nurse.family_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if nurse.connection.identity %}{{ nurse.connection.identity }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+			</tr>{% endif %}{% endfor %}{% else %}
+			<tr class="no-data">
+				<td colspan="5">
+					{% trans "No nurses yet" %}
+					<!--<a href="/nurse/add" class="add">
+						{% trans "Add a Nurse" %}
+					</a>-->
+				</td>
+			</tr>{% endif %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5">
+					{% paginator nurses %}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+{% endblock %}
+

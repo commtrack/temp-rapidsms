@@ -1,0 +1,14 @@
+
+#inner table {
+	width: 100%;
+}
+
+#inner th,
+#inner td {
+	width: 16%;
+}
+
+#inner th:last-child,
+#inner td:last-child {
+	width: 32%;
+}

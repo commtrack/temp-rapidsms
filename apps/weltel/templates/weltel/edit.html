@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="module">
+<h2>{{ title }}</h2>
+<p/>
+{% if status %}
+	<div>{{ status }}</div>
+{% endif %}
+{% if error %}
+	<label class="error">{{ error }}</label>
+{% endif %}
+
+	<form action="" method="POST">
+	{{ form }}<p/>
+	<input type="submit" value="Submit" />
+	</form>
+
+   	<div class="toolbar">
+	   	<a href="/contact/delete/{{ contact.pk }}" class="delete">{% trans "Delete This Contact" %}</a>
+	</div>
+</div>
+
+{% endblock %}
+

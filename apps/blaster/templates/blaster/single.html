@@ -1,0 +1,11 @@
+{% extends "blaster/base.html" %}
+
+{% block content %}
+<p><span class="prompt">Message: </span><span class="prompt_value">{{ blast.message.text }}</span></p>
+<p><span class="prompt">Sent: </span><span class="prompt_value">{{ blast.date|date }} - {{ blast.date|time }}</span></p>
+<p><span class="prompt">Recipients: </span><span class="prompt_value">{{  blast.recipients.count }}</span></p>
+<p><span class="prompt">Responded: </span><span class="prompt_value">{{ blast.responded|length }}</span></p>
+{% with blast.recipients.all as recipients %}
+{% include "blaster/partials/blast_recipients.html" %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load pagination-tags %}
+
+	<h2>{% trans "History" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Source" %}</th>
+				<th scope="col">{% trans "Description" %}</th>
+				<th scope="col">{% trans "Date" %}</th>
+			</tr>
+		</thead>
+		<tbody>{% if history.object_list %}{% for log in history.object_list %}
+			<tr>
+				{% for field in log %}
+                <td>{{ field }}</td>
+                {% endfor %}
+			</tr>{% endfor %}{% else %}
+			<tr class="no-data">
+				<td colspan="3">
+					{% trans "No information has been submitted." %}
+				</td>
+			</tr>{% endif %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">
+					{% paginator history %}
+				</td>
+			</tr>
+		</tfoot>
+	</table>

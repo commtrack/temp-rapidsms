@@ -1,0 +1,196 @@
+{% extends "schools/base.html" %}
+{% block content %}
+<h1>
+	<a href="">School Monitoring</a>
+	/ <a href="">Dashboard</a>
+</h1>
+
+
+<div class="module map">
+	<h2>Overview of Schools</h2>
+  {% with "Custom" as marker %}
+	{% include "schools/partials/map.html" %}
+	{% endwith %}
+</div>
+<div class="clear-hack"></div>
+
+
+<div class="split-3">
+	<div class="left">
+		<div class="module">
+			<h2>Latest Reports</h2>
+			<div class="toolbar">
+				<a href="">All Reports</a>
+			</div>
+			<ul class="reports">
+				<li>
+					<div class="report">
+						The water is <strong>working</strong>.
+					</div>
+					<div class="meta">
+						<a href="" class="reporter">Bob User</a>
+						at <a href="" class="location">Lyantonde Secondary</a>
+					</div>
+				</li>
+				<li>
+					<div class="report">
+						<strong>7 out of 10</strong>
+						teachers are present today.
+					</div>
+					<div class="meta">
+						<a href="" class="location">Luwero Primary</a>
+						&raquo;  <a href="" class="reporter">Alice User</a>
+					</div>
+				</li>
+				<li>
+					<div class="report">
+						<strong>8 boys</strong> and <strong>11 girls</strong>
+						are present <!--in grade <strong>P1</strong>--> today.
+					</div>
+					<div class="meta">
+						<a href="" class="location">Luwero Primary</a>
+						&raquo; <a href="" class="reporter">Charlie User</a>
+					</div>
+				</li>
+				<li class="warn">
+					<div class="report">
+						Test
+					</div>
+					<div class="meta">
+						<a href="" class="location">Luwero Primary</a>
+						&raquo; <a href="" class="reporter">Dave User</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mid">
+		<div class="module">
+			<h2>Today's Stats</h2>
+			<div class="toolbar">
+				<a href="">All Stats</a>
+			</div>
+			<ul class="stats">
+				<li>
+					<div class="report">
+						153<span> of </span><span class="total">450</span><span> is </span>34%
+					</div>
+					<div class="caption">
+						Schools Reported Today
+					</div>
+				</li>
+				<li>
+					<div class="report">
+						752<span> of </span><span class="total">1023</span><span> is </span>74%
+					</div>
+					<div class="caption">
+						Teachers Reported Today
+					</div>
+				</li>
+				<li>
+					<div class="report">
+						20352<span> of </span><span class="total">25014</span><span> is </span>81%
+					</div>
+					<div class="caption">
+						Students Reported Today
+					</div>
+				</li>
+				<li>
+					<div class="report">
+						135<span> of </span><span class="total">152</span><span> is </span>89%
+					</div>
+					<div class="caption">
+						Water Supplies Working Today
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="module">
+			<h2>Global Stats</h2>
+			<div class="toolbar">
+				<a href="">All Stats</a>
+			</div>
+			<ul class="stats">
+				<li>
+					<div class="report">450</div>
+					<div class="caption">Schools Registered</div>
+				</li>
+				<li>
+					<div class="report">1023</div>
+					<div class="caption">Registered Teachers</div>
+				</li>
+				<li>
+					<div class="report">25014</div>
+					<div class="caption">Registered Students</div>
+				</li>
+				<li>
+					<div class="report">87%</div>
+					<div class="caption">Overall Teacher Attendance Rate</div>
+				</li>
+				<li>
+					<div class="report">72%</div>
+					<div class="caption">Overall Student Attendance Rate</div>
+				</li>
+				<li>
+					<div class="report">91%</div>
+					<div class="caption">Water Supplies Working</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear-hack"></div>
+
+<div class="split-2">
+	<!--<div class="left">
+		<div class="module">
+			<h2>Problems</h2>
+			<ul class="problems">
+				<li>The water is NOT working at Olila High School!</li>
+				<li>No teachers attended Rhema Primary School Today!</li>
+				<li>The water is NOT working at Teso Secondary School!</li>
+				<li>The water is NOT working at St. Joseph Secondary School!</li>
+				<li>The water is NOT working at Seroma Primary School!</li>
+			</ul>
+			<a class="more" href="">All Problems</a>
+		</div>
+	</div>-->
+	<div class="left">
+		<div class="module">
+			<h2>Recent Questions</h2>
+			<div class="toolbar">
+				<a href="{% url blaster.views.list %}">All Blasts</a>
+			</div>
+
+			{% if recent_blasts %}
+				{% with recent_blasts as blasts %}
+					{% include "blaster/partials/blast_table.html" %}
+				{% endwith %}
+			{% else %}
+				No blasts yet.
+			{% endif %}
+		</div>
+	</div>
+	<div class="right">
+		<div class="module">
+		{% if last_blast %}
+			<h2>Last Question</h2>
+			<div class="toolbar">
+				<a href="{% url blaster.views.single_blast last_blast.id %}">All Questions</a>
+			</div>
+
+			<p><span class="prompt">Message: </span><span class="prompt_value">{{last_blast.message.text }}</span></p>
+			<p><span class="prompt">Sent: </span><span class="prompt_value">{{ last_blast.date|date }} - {{ last_blast.date|time }}</span></p>
+			{% with last_blast_recipients as recipients %}
+				{% include "blaster/partials/blast_recipients.html" %}
+			{% endwith %}
+		{% else %}
+			No blasts found.
+		{% endif %}
+		</div>
+	</div>
+</div>
+<div class="clear-hack"></div>
+{% endblock %}

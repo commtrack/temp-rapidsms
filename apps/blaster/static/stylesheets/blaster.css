@@ -1,0 +1,135 @@
+.module {
+	/*background: #f8f8f8;*/
+}
+
+	.module ul,
+	.module li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.module ul {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 12em;
+	}
+
+		.module li {
+			display: block;
+			border-top: 1px dotted #eee;
+		}
+
+		.module li:first-child {
+			border-top: none; }
+
+			.module li.region div {
+				background: #f8f8f8;
+				text-align: center;
+				padding: 0.5em;
+				color: #aaa;
+			}
+
+		.module li a {
+			display: block;
+			padding: 0.5em;
+			color: #333;
+		}
+
+		.module li a:hover {
+			text-decoration: none;
+		}
+
+
+.module.locations a,
+.module.roles a {
+	background: url("../../webapp/icons/silk/bullet_white.png") no-repeat 0 50%;
+	padding-left: 21px;
+	outline: none;
+}
+
+	.module .checked a,
+	.module .checked-parent a {
+		background-image: url("../../webapp/icons/silk/accept--dull.png");
+		background-color: #fffff8;
+	}
+
+	#inner .module .checked a {
+		background-image: url("../../webapp/icons/silk/accept.png"); }
+
+
+table {
+	width: 100%;
+}
+
+	td, th {
+		width: 25%;
+	}
+
+
+.question { }
+
+	.question ul {
+		background: #f8f8f8;
+		padding: 0.5em;
+		height: 24em;
+	}
+
+	.question li {
+		border: 1px solid #ddd;
+		background: #fff;
+		margin-top: 0.5em;
+	}
+
+		.question li:first-child {
+			border-top: 1px solid #ddd;
+			margin-top: 0;
+		}
+
+	.question li a {
+		font-size: 2em;
+		padding: 0.25em;
+		line-height: 1.2;
+		color: #000;
+		outline: 0;
+	}
+
+		.question li a:hover {
+			text-decoration: none;
+			background: none;
+		}
+
+		.question li.checked {
+			background: #ffd; }
+
+		#inner .question li.checked a {
+			background: #ffd; }
+
+	.question li .info {
+		border-top: 1px dotted #eee;
+		color: #aaa;
+		height: 2em;
+	}
+
+		.question li .info div {
+			float: left;
+			border-left: 1px dotted #eee;
+			padding-right: 1em;
+			padding: 0.5em;
+		}
+
+			.question li .info div:first-child {
+				border-left: none; }
+
+		.question li .info span {
+			color: #666; }
+
+
+.send {
+	text-align: center;
+}
+
+
+.split-3, .split-2, .send {
+	margin-top: 1em;
+}

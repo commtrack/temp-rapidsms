@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load pagination-tags %}
+{% block title %}{{ patient }}{% endblock %}
+
+{% block content %}
+
+<div class="module">
+	<h2>{{ patient }}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Patient" %}</th>
+				<th scope="col">{% trans "First Name" %}</th>
+				<th scope="col">{% trans "Last Name" %}</th>
+				<th scope="col">{% trans "Gender" %}</th>
+				<th scope="col">{% trans "Phone Number(s)" %}</th>
+				<th scope="col">{% trans "State" %}</th>
+				<th scope="col">{% trans "Active" %}</th>
+				<th scope="col">{% trans "Subscribed" %}</th>
+				<th scope="col">{% trans "Site" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="/patient/{{ patient.pk }}/edit">{{ patient }}</a></td>
+                <td>{% if patient.first_name %}{{ patient.first_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.last_name %}{{ patient.last_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.gender %}{{ patient.gender }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if phone_numbers %}{{ phone_numbers|join:", " }}{% else %}<span class="na">n/a</span>{% endif %}
+                <td>{% if patient.state %}{{ patient.state }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if patient.active %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}</td>
+                <td>{% if patient.subscribed %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}</td>
+                <td>{% if patient.site %}{{ patient.site }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	{% if messages %}
+		{% include 'weltel/partials/messages.html' %}
+		<p/>
+		Return to history view <a href="{% url patient_history patient.pk %}">here</a>.
+	{% else %}{% if history %}
+		{% include 'weltel/partials/history.html' %}
+		<p/>
+		View raw message logs <a href="{% url patient_messages patient.pk %}">here</a>.
+	{% endif %}{% endif %}
+
+</div>
+{% endblock %}
+

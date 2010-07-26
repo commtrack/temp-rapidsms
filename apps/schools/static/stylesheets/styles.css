@@ -1,0 +1,289 @@
+#app-nav ul
+{
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+    width: 950px;
+    padding-bottom: 7px;
+    border-bottom-width: 1px; 
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+    
+}
+
+#app-nav li
+{
+    display: inline;
+}
+
+
+#app-nav a {
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 120%;
+    background-color:#eeeeee;
+}
+
+#app-nav a:hover
+{
+    background-color:#dddddd;
+}
+
+
+.error {
+    font-weight:bold;
+    color:red;
+}
+
+
+/* the status of folks from the blaster */
+.pending {
+    background-color: #eeeeee;
+}
+
+.failed {
+    color: #333333;
+    background-color: red;
+}
+.success {
+	background:#C1FFC0;
+	border-color:#C6D880;
+}
+
+/* end status */
+
+td .date {
+    font-size: .5em;
+}
+
+.prompt_value {
+    font-weight:bold;
+}
+
+.no_data {
+    color:red;	
+}
+
+/* modal dialogs */
+/* jqModal base Styling courtesy of;
+  Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+  the Window's z-index value will be set to 3000 by default (in jqModal.js). You
+  can change this value by either;
+    a) supplying one via CSS
+    b) passing the "zIndex" parameter. E.g.  (window).jqm({zIndex: 500}); */
+
+
+.new_message {
+    display: none;
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    margin-left: -300px;
+    width: 400px;
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Fixed posistioning emulation for IE6
+   Star selector used to hide definition from browsers other than IE6
+   For valid CSS, use a conditional include instead */
+* html .new_message {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+/*************** DASHBOARD STUFF ***************/
+
+.dashboard-module {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    position:relative;
+    min-height:200px;
+    background-color: #EEE; 
+}
+.dashboard-link {
+    position:absolute;
+    padding: 0.25em 0.5em;
+    bottom: 0;
+    right: 0;
+    background: #f8f8f8;
+    -moz-border-radius-topleft: 0.5em;
+}
+
+#map {
+    background-color:white; 
+}
+.school-reports, .global-stats { 
+    line-height: 1.5em; 
+    list-style-type: square;
+}
+
+.school-reports, .global-stats li { 
+    padding-bottom: 3px; 
+    padding-top: 3px; 
+}
+
+
+/* END DASHBOARD */
+
+
+/* custom headings */
+
+h2, h3 {
+    border-style: none;
+    background: none;
+    color: #999999;
+}
+
+h2 {
+    color: white; 
+    background-color: #333333; 
+    padding: 10px; 
+    border-color: #999999; 
+    border-style: solid; 
+    border-width: 1px;
+    margin-bottom: 0.25em;
+}
+
+
+body {
+}
+
+#inner {
+	width: 970px;
+}
+
+/* schools list styling */
+
+#regions .selected {
+    font-weight: bold;
+}
+
+#regions ul, #districts ul
+{
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+#regions li, #districts li 
+{
+    margin-top: 10px;
+	padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+}
+
+/* padding copied from blueprint screen */
+th, td, caption {padding:4px 10px 4px 5px;}
+
+/* headings */
+thead th 
+{
+    background-image: none;
+    background-color: #999999;
+    color: white;
+    font-weight: bold;
+}
+
+/* these are the buttons on the maps */
+#buttons ul li {
+    color: #999999;
+    cursor:pointer;
+    font-size: 17px;
+    border-color: #cccccc;
+    border-style: solid;
+    margin-bottom: 10px;
+    border-width: 1px;
+    padding-right: 25px;
+    padding-left: 75px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    list-style-type: none;   
+    min-height:25px;
+}
+
+#response_rate li {
+    
+    background: url(../images/responses_64.png) no-repeat center left;
+}
+
+#water_availability li {
+    
+    background: url(../images/water_64.png) no-repeat center left;
+}
+
+
+#teacher_attendance li {
+    
+    background: url(../images/teachers_64.png) no-repeat center left;
+}
+
+#boys_attendance li {
+    
+    background: url(../images/boys_64.png) no-repeat center left;
+}
+
+#girls_attendance li {
+    background: url(../images/girls_64.png) no-repeat center left;
+}
+
+#slogan{
+}
+
+.slogan{
+    padding-left: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    padding-top: 20px;
+    line-height: 40px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    height: 60px;
+    background: left;
+    font-size: 40px;
+    color: #999999;
+}
+
+
+/* a few fixes to repair the damage done by blueprintcss
+ * most of these could be avoided by including blueprint BEFORE the
+ * rapidsms stylesheets (it is a framework, after all), but that would
+ * require more template rejiggery than i want to perform right now. */
+
+/* blueprint/screen.css:99
+ * (seriously? fix the width of all ".container"s??) */
+#header .container {
+    width: auto;
+}
+
+/* blueprint/screen.css:39
+ * (restore styles from webapp/layout.css:19) */
+a {
+    color: #33A7D2;
+    text-decoration: none;
+}
+
+/* blueprint/screen.css:38
+ * (restore styles from webapp/layout.css:24) */
+a:hover {
+	color: #33A7D2;
+}
+
+/* blueprint/screen.css:26
+ * (restore from webapp/layout.css:10) */
+body {
+    font-family: "Lucida Grande", "Bitstream Vera Sans", Verdana, sans-serif;
+}

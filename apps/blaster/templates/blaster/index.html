@@ -1,0 +1,13 @@
+{% extends "blaster/base.html" %}
+
+{% block title %}{{ block.super }} &raquo; Previous Questions{% endblock %}
+
+{% block content %}
+<h1>
+	<a href="">Question Sender</a>
+	/ <a href="">Previous Questions</a>
+</h1>
+
+<h2>Messages</h2>
+{% include "blaster/partials/blast_table.html" %}
+{% endblock %}

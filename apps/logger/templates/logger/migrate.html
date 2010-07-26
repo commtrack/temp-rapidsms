@@ -1,0 +1,11 @@
+{% extends base_template %}
+{% load pagination-tags %}
+{% block title %}Message Log{% endblock %}
+{% block content %}
+<form method="POST">
+    <h4>Would you really like to migrate {{ incoming.count }} incoming and {{ outgoing.count }} outgoing messages 
+onto the new logging format?</h4>
+    <input type="hidden" name="confirmed" value="True" />
+    <input type="submit" name="yes" value="Yes" />
+</form>
+{% endblock %}

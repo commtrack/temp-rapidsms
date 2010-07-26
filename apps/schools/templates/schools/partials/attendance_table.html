@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Reported By</th>
+        <th>Actual</th>
+        <th>Expected</th>
+        <th>Overall %</th>
+    </thead>
+    <tbody>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.date }}</td>
+            <td>{{ report.reporter }}</td>
+            <td>{{ report.actual }}</td>
+            <td>{{ report.expected }}</td>
+            <td>{{ report.percent }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

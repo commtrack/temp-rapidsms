@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load pagination-tags %}
+{% block title %}Weltel {% trans "Sites" %}{% endblock %}
+
+{% block content %}
+
+<div class="module">
+	<h2>{% trans "Sites" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Site" %}</th>
+				<th scope="col">{% trans "Patients" %}</th>
+				<th scope="col">{% trans "Nurses" %}</th>
+				<th scope="col">{% trans "Sawa" %}</th>
+				<th scope="col">{% trans "Shida" %}</th>
+				<th scope="col"></th>
+				<th scope="col">{% trans "Sawa This Week" %}</th>
+				<th scope="col">{% trans "Shida This Week" %}</th>
+			</tr>
+		</thead>
+		<tbody>{% if sites.object_list %}{% for site in sites.object_list %}
+			<tr>
+				<td><a href="/site/{{ site.pk }}"{% if site.name %}>{{ site.name }}{% else %} class="unknown">Unknown{% endif %}</a></td>
+                <td>{% if site.patient_count %}{{ site.patient_count }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if site.nurse_count %}{{ site.nurse_count }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if site.sawa_count %}{{ site.sawa_count }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if site.shida_count %}{{ site.shida_count }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{% if site.sawa_count_this_week %}{{ site.sawa_count_this_week }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if site.shida_count_this_week %}{{ site.shida_count_this_week }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+			</tr>{% endfor %}{% else %}
+			<tr class="no-data">
+				<td colspan="8">
+					{% trans "No sites yet" %}
+					<!--
+					<a href="/site/add" class="add">
+						{% trans "Add a Site" %}
+					</a>
+					-->
+				</td>
+			</tr>{% endif %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="8">
+					{% paginator sites %}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<!--
+	<div class="toolbar">
+		<a href="/site/add" class="add">{% trans "Add a Site" %}</a>
+	</div>-->
+</div>
+{% endblock %}
+

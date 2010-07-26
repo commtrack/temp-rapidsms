@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>School</th>
+        <th>Status</th>
+        <th>Last Response</th>
+        <th>Date</th>
+    </thead>
+    <tbody>
+    {% for recip in recipients %}
+        <tr class="{{recip.status}}">
+            <td>{{ recip.reporter }}</td>
+            <td>{{ recip.school }}</td>
+            <td>{{ recip.status }}</td>
+            {% if recip.responded %}
+            <td>{{ recip.response.text }}</td>
+            <td>{{ recip.response.date|date }} - {{ recip.response.date|time }}</td>
+            {% else %}
+            <td>N/A</td>
+            <td>N/A</td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

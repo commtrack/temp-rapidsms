@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<School name="My School" latitude="42.36032" longitude="-71.163425">
+    <Teachers>7</Teachers>
+    <Headmasters>
+        <Headmaster>
+            <name>Cory</name>
+            <phone>+25512345555</phone>
+        </Headmaster>
+    </Headmasters>
+    <Grades>
+        <Grade>
+            <year>1</year>
+            <boys>15</boys>
+            <girls>22</girls>
+        </Grade>
+        <Grade>
+            <year>2</year>
+            <boys>14</boys>
+            <girls>12</girls>
+        </Grade>
+    </Grades>
+    <Messages>
+        <Message>
+            <incoming>True</incoming>
+            <correspondent>Cory</correspondent>
+            <date>08-11-2009 15:30</date>
+            <text>There are interesting things happening at my school today.</text>
+        </Message>
+        <Message>
+            <incoming>False</incoming>
+            <correspondent>Cory</correspondent>
+            <date>08-11-2009 15:15</date>
+            <text>How are things going over there?</text>
+        </Message>
+    </Messages>
+    <SchoolTeacherAttendance>
+        <date>08-11-2009 15:30</date>
+        <expected>4</expected>
+        <actual>3</actual>
+    </SchoolTeacherAttendance>
+    <!-- Grade-level attendance, others could work similarly, see models for more info -->    
+</School>

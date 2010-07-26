@@ -1,0 +1,62 @@
+{% extends "schools/school_base.html" %}
+{% block title %}Schools - {{ block.super }}{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="/static/schools/javascripts/jqModal.js"></script>
+    <script type="text/javascript" src="/static/schools/javascripts/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/static/schools/javascripts/message.js"></script>
+{% endblock %}
+{% block pagecontent %}
+<h2>School Summary</h2>
+{% if selected_region %}
+<p><a href="{% url schools.views.schools %}">Show All</a></p>
+{% endif %}
+
+<h3>Filter by Region</h3>
+<div id="regions">
+<ul>
+{% for region in regions %}
+    <li {% ifequal selected_region region %}class="selected"{% endifequal %}>
+    <a href="{% url schools.views.schools %}?region={{ region.id }}">{{region}}</a></li>
+{% endfor %}
+</ul>
+{% if districts %}
+<h3>Filter by District</h3>
+<div id="districts">
+<ul>
+{% for district in districts %}
+    <li {% ifequal selected_district district %}class="selected"{% endifequal %}>
+    <a href="{% url schools.views.schools %}?district={{ district.id }}">{{district}}</a></li>
+{% endfor %}
+{% endif %}
+</ul>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Headmaster (click to message)</th>
+        <th>Response Rate</th>
+        <th>Teacher Attendance</th>
+        <th>Girls Attendance</th>
+        <th>Boys Attendance</th>
+        <th>Water Availability</th>
+    </thead>
+    <tbody>
+        {% for school in schools %}
+        <tr>
+            <td><a href="{% url schools.views.single_school school.id %}">{{ school.name }}</a></td>
+            <td>{% if school.headmaster %}
+                <div class="messagetrigger js_link" onclick="new_message({{school.headmaster.id}}, '#dialog');">
+                    {{ school.headmaster }}
+                </div>
+                {% else %}None{% endif %}
+            </td>
+            <td>{{ school.response_rate|floatformat:2 }}</td>
+            <td>{{ school.teacher_attendance|floatformat:2 }}</td>
+            <td>{{ school.girls_attendance|floatformat:2 }}</td>
+            <td>{{ school.boys_attendance|floatformat:2 }}</td>
+            <td>{{ school.water_availability|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% include "schools/partials/message_div.html" %}
+{% endblock %}

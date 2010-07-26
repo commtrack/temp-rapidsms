@@ -1,0 +1,275 @@
+{% extends "blaster/base.html" %}
+{% load pagination-tags %}
+
+
+{% block content %}
+<h1>
+	<a href="">Question Sender</a>
+	/ <a href="">New Question</a>
+</h1>
+
+<div class="split-4">
+	<div class="left">
+		<div class="module locations regions">
+			<h2>Regions</h2>
+			<ul>{% for region in regions %}
+				<li id="loc-{{ region.pk }}">
+					<a href="">{{ region }}</a>
+				</li>{% endfor %}
+		</div>
+	</div>
+	<div class="mid-left">
+		<div class="module locations districts">
+			<h2>Districts</h2>
+			<!--<div class="toolbar">
+				<a href="">All</a>
+				<a href="">None</a>
+			</div>-->
+			<ul>{% for district in districts %}
+				<li id="loc-{{ district.pk }}" class="child-of-{{ district.parent_id }}">
+					<a href="">{{ district }}</a>
+				</li>{% endfor %}
+		</div>
+	</div>
+	<div class="mid-right">
+		<div class="module locations schools">
+			<h2>Schools</h2>
+			<ul>{% for school in schools %}
+				<li id="loc-{{ school.pk }}" class="child-of-{{ school.parent_id }}">
+					<a href="">{{ school }}</a>
+				</li>{% endfor %}
+		</div>
+	</div>
+	<div class="right">
+		<div class="module roles">
+			<h2>Roles</h2>
+			<ul>{% for key, val in roles %}
+				<li class="role-{{ key}}{% ifequal key "headmaster" %} checked{% endifequal %}">
+					<a href="">
+						{{ val }}
+					</a>
+				</li>{% endfor %}
+		</div>
+	</div>
+</div>
+<div class="clear-hack"></div>
+
+<script type="text/javascript">
+	(function() {
+		var cls = "checked";
+		var par = "-parent";
+
+		var checked = function(element) {
+			return $(element).hasClass(cls) || $(element).hasClass(cls+par);
+		};
+
+		var children = function(element) {
+			var loc_slug = $(element).get(0).id;
+			var loc_pk = loc_slug.replace(/\D/g, "");
+			return $(".child-of-" + loc_pk);
+		};
+
+		var inherit = function(element, state) {
+			$.each(children(element), function() {
+				$(this).toggleClass(cls+par, state);
+				inherit(this, checked(this));
+			});
+		};
+
+		$(".module.locations a, .module.roles a").click(function(ev) {
+			var li = $(this).parent("li");
+			li.toggleClass(cls);
+			inherit(li, checked(li));
+			ev.preventDefault();
+		});
+	})();
+</script>
+
+
+<div class="split-2">
+	<div class="left">
+		<div class="module">
+			<h2>Recipients</h2>
+
+			<table class="sortable">
+				<thead>
+					<tr>
+						<th><a href="">Person</a></th>
+						<th><a href="">Role</a></th>
+						<th><a href="">School</a></th>
+					</tr>
+				</thead>
+
+				<tbody>{% if people.object_list %}{% for person in people.object_list %}
+					<tr>
+						<td>{{ person }}</td>
+						<td>{{ person.school_role }}</td>
+						<td>{{ person.location.name }}</td>
+					</tr>{% endfor %}{% else %}
+					<tr class="no-data">
+						<td colspan="3">
+							No recipients yet.
+						</td>
+					</tr>
+					{% endif %}
+				</tbody>
+
+				<tfoot>
+					<tr>
+						<td colspan="3">
+							<div class="paginator">
+								{% paginator people %}
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	<div class="right">
+		<div class="module question">
+			<h2>Question</h2>
+			<ul>{% for message in messages %}
+				<li>
+					<a href="">{{ message }}</a>
+					<div class="info">
+						<div>Used: <span>6 times</span></div>
+						<div>Last: <span>10 days ago</span></div>
+						<div>Responses: <span>650</span></div>
+						<div>Rate: <span>50%</span></div>
+					</div>
+				</li>{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear-hack"></div>
+
+<script type="text/javascript">
+	(function() {
+		$(".question a").click(function(ev) {
+			var li = $(this).parent("li");
+			li.toggleClass("checked");
+			ev.preventDefault();
+		});
+	})();
+</script>
+
+<div class="send">
+	<input type="button" value="Send Question" />
+</div>
+{% endblock %}
+
+
+
+
+
+{% block javascriptsx %}
+<script type="text/javascript">
+// TODO: clean all these javascripts
+function toggle(source) {
+  checkboxes = document.getElementsByName('foo');
+  for each(var checkbox in checkboxes)
+    checkbox.checked = source.checked;
+}
+
+function last_choice(selection) {
+  return selection.selectedIndex==selection.length - 1; }
+
+function valid(menu,txt) {
+  if(menu.selectedIndex == 0) {
+    alert('You must make a selection from the menu');
+    return false;} 
+  if(txt.value == '') {
+    if(last_choice(menu)) {
+      alert('You need to type your choice into the text box');
+      return false; }
+    else {
+      return true; }}
+  else {
+    if(!last_choice(menu)) {
+      alert('Incompatible selection');
+      return false; }
+    else {
+      return true; }}}
+
+function activate(field) {
+  field.disabled=false;
+  if(document.styleSheets)field.style.visibility  = 'visible';
+  field.focus(); }
+
+function process_choice(selection,textfield) {
+  if(last_choice(selection)) {
+    activate(textfield); }
+  else {
+    textfield.disabled = true;    
+    if(document.styleSheets) {
+        // textfield.style.visibility  = 'hidden';
+    }
+    textfield.value = ''; }}
+
+function check_choice() {
+  if(!last_choice(document.mainform.message)) {
+    document.mainform.choicetext.blur();
+    alert('Please check your menu selection first');
+    document.mainform.message.focus(); }}
+    
+    
+function toggle(name, value) {
+  checkboxes = document.getElementsByName(name);
+  for each(var checkbox in checkboxes)
+    checkbox.checked = value;
+}
+
+</script>
+{% endblock %}
+
+{% block contentx %}
+<h1>
+	<a href="">Question Sender</a>
+	/ <a href="">New Question</a>
+</h1>
+
+
+
+
+<h2>New Question</h2>
+<br>
+{% if errors %}
+<p><span class="error">{{ errors|safe }}</p>
+{% endif %}
+<form name="mainform" method="post">
+Choose an existing question: 
+<select name="message" onchange="process_choice(this,document.mainform.new_question)"  >
+    <option value="">(Please Select)</option>
+    {% for message in messages %}
+     <option value="{{message.id}}">{{message.text}}</option>
+     {% endfor %}
+     <option value="new">== New Question ==</option>
+</select>
+<p>New Question Text: <input type="text" name="new_question" maxlength="160" style="width:500px;" disabled="true"/></p>
+Select: <span class="js_link" onclick="toggle('select_reporter', true)">All</span>, <span class="js_link" onclick="toggle('select_reporter', false)">None</span>  
+        
+<table>
+    <thead>
+        <th>Send?</th>
+        <th>Person</th>
+        <th>School</th>
+        <th>Role(s)</th>
+    </thead>
+    <tbody>
+    {% for reporter in reporters %}
+        <tr>
+            <td>
+                <input type="checkbox" name="select_reporter" id="{{reporter.id}}" value="{{reporter.id}}"/>
+            </td>
+            <td>{{ reporter }}</td>
+            <td>{{ reporter.school }}</td>
+            <td>{{ reporter.school_role }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<input type="submit" value="Send" />
+</form>
+{% endblock %}

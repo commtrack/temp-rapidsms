@@ -1,0 +1,27 @@
+{% extends "iavi/layout.html" %}
+{% block title %}IAVI Summary{% endblock %}
+{% block pagecontent %}
+<h2>All Participants</h2>
+<table width="100%"> 
+    <thead>
+        <tr>
+            <th>Participant Id</th>
+            <th>Site</th>
+            <th>Date Started</th>
+            <th>Mobile Number</th>
+            <th>PIN</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td><a href="/iavi/participants/{{reporter.pk}}/">{{participant.reporter.study_id}}</a></td>
+                <td>{{participant.reporter.location}}</td>
+                <td>{{participant.start_date|date:"d-M-Y"}}</td>
+                <td>{{participant.reporter.connection.identity}}</td>
+                <td>{{participant.reporter.pin}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends base_template %}
+
+{% block title %}School Monitoring{% endblock %}
+
+{% block page_stylesheets %}
+<link type="text/css" rel="stylesheet" href="/static/schools/stylesheets/schools.css" />
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="static/schools/javascripts/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/static/schools/javascripts/flashlinks.js" ></script>
+{% endblock %}
+
+{% block page_tabs %}
+<ul id="page-tabs">
+	<li><a href="/schools/">Dashboard</a></li>
+	<li><a href="/schools/list">Schools List</a></li>
+	<li><a href="/schools/map/">Maps</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{% block pagecontent %}
+{% endblock %}
+{% endblock %}

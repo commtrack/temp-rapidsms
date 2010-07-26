@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load pagination-tags %}
+{% block title %}{{ site.name }}{% endblock %}
+
+{% block content %}
+
+<div class="module">
+	<h2>{% trans "Nurses" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Nurse" %}</th>
+				<th scope="col">{% trans "First Name" %}</th>
+				<th scope="col">{% trans "Last Name" %}</th>
+				<th scope="col">{% trans "Alias" %}</th>
+				<th scope="col">{% trans "Phone Number(s)" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="/nurse/{{ nurse.pk }}/edit">{{ nurse }}</a></td>
+                <td>{% if nurse.first_name %}{{ nurse.first_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if nurse.last_name %}{{ nurse.last_name }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if nurse.alias %}{{ nurse.alias }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if phone_numbers %}{{ phone_numbers|join:", " }}{% else %}<span class="na">n/a</span>{% endif %}
+                </td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>{% trans "Message Log" %}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{% trans "Date" %}</th>
+				<th scope="col">{% trans "Message" %}</th>
+			</tr>
+		</thead>
+		<tbody>{% if logs.object_list %}{% for log in logs.object_list %}
+			<tr>
+                <td>{% if log.date %}{{ log.date }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+                <td>{% if log.text %}{{ log.text }}{% else %}<span class="na">n/a</span>{% endif %}</td>
+			</tr>{% endfor %}{% else %}
+			<tr class="no-data">
+				<td colspan="2">
+					{% trans "No messages yet" %}
+				</td>
+			</tr>{% endif %}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">
+					{% if logs %}
+						{% paginator logs %}
+					{% endif %}
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+{% endblock %}
+

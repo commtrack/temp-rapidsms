@@ -1,0 +1,110 @@
+[
+  {
+    "pk": 1, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "Is the school water point currently working?", 
+      "handling_method": "water_availability", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many teachers were present today?", 
+      "handling_method": "teacher_attendance", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many text books have been received this week?", 
+      "handling_method": "schools", 
+      "handling_app": "textbooks"
+    }
+  },
+  {
+    "pk": 4, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many text books have been received this month?", 
+      "handling_method": "schools", 
+      "handling_app": "textbooks"
+    }
+  },
+  {
+    "pk": 5, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many text books have been received this year?", 
+      "handling_method": "schools", 
+      "handling_app": "textbooks"
+    }
+  },
+  {
+    "pk": 6, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P1 today?", 
+      "handling_method": "grade_attendance_1", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P2 today?", 
+      "handling_method": "grade_attendance_2", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P3 today?", 
+      "handling_method": "grade_attendance_3", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P4 today?", 
+      "handling_method": "grade_attendance_4", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P5 today?", 
+      "handling_method": "grade_attendance_5", 
+      "handling_app": "schools"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "How many boys and girls attended P6 today?", 
+      "handling_method": "grade_attendance_6", 
+      "handling_app": "schools"
+    }
+  },
+  {
+    "pk": 12, 
+    "model": "blaster.blastablemessage", 
+    "fields": {
+      "text": "A new instruction has been posted. Call to Listen.", 
+      "handling_method": "", 
+      "handling_app": ""
+    }
+  }
+]

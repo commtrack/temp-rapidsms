@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Reported By</th>
+        <th>Water Working?</th>
+    </thead>
+    <tbody>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.date }}</td>
+            <td>{{ report.reporter }}</td>
+            {% if report.water_working %}<td>Yes</td>
+            {% else %}<td class="error">No</td>{% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

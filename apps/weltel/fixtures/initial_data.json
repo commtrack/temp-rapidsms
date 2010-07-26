@@ -1,0 +1,1728 @@
+[
+    {
+        "pk": 22, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_logentry", 
+            "name": "Can add log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_logentry", 
+            "name": "Can change log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_logentry", 
+            "name": "Can delete log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_group", 
+            "name": "Can add group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_message", 
+            "name": "Can add message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_permission", 
+            "name": "Can add permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_user", 
+            "name": "Can add user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_group", 
+            "name": "Can change group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_message", 
+            "name": "Can change message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_permission", 
+            "name": "Can change permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_user", 
+            "name": "Can change user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_group", 
+            "name": "Can delete group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_message", 
+            "name": "Can delete message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_permission", 
+            "name": "Can delete permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_user", 
+            "name": "Can delete user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_contenttype", 
+            "name": "Can add content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_contenttype", 
+            "name": "Can change content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_contenttype", 
+            "name": "Can delete content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_app", 
+            "name": "Can add app", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_domain", 
+            "name": "Can add domain", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_domainform", 
+            "name": "Can add domain form", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_form", 
+            "name": "Can add form", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_formentry", 
+            "name": "Can add form entry", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_formtoken", 
+            "name": "Can add form token", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_regexalerter", 
+            "name": "Can add regex alerter", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_token", 
+            "name": "Can add token", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_tokenentry", 
+            "name": "Can add token entry", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_tokenexistancevalidator", 
+            "name": "Can add token existance validator", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_tokenvalidator", 
+            "name": "Can add token validator", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_app", 
+            "name": "Can change app", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_domain", 
+            "name": "Can change domain", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_domainform", 
+            "name": "Can change domain form", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_form", 
+            "name": "Can change form", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_formentry", 
+            "name": "Can change form entry", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_formtoken", 
+            "name": "Can change form token", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_regexalerter", 
+            "name": "Can change regex alerter", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_token", 
+            "name": "Can change token", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_tokenentry", 
+            "name": "Can change token entry", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_tokenexistancevalidator", 
+            "name": "Can change token existance validator", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_tokenvalidator", 
+            "name": "Can change token validator", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_app", 
+            "name": "Can delete app", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_domain", 
+            "name": "Can delete domain", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_domainform", 
+            "name": "Can delete domain form", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_form", 
+            "name": "Can delete form", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_formentry", 
+            "name": "Can delete form entry", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_formtoken", 
+            "name": "Can delete form token", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_regexalerter", 
+            "name": "Can delete regex alerter", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_token", 
+            "name": "Can delete token", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_tokenentry", 
+            "name": "Can delete token entry", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_tokenexistancevalidator", 
+            "name": "Can delete token existance validator", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_tokenvalidator", 
+            "name": "Can delete token validator", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_permissions", 
+            "name": "Can add permissions", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_view", 
+            "name": "Can view", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_permissions", 
+            "name": "Can change permissions", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_permissions", 
+            "name": "Can delete permissions", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_location", 
+            "name": "Can add location", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_locationtype", 
+            "name": "Can add Type", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_location", 
+            "name": "Can change location", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_locationtype", 
+            "name": "Can change Type", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_location", 
+            "name": "Can delete location", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_locationtype", 
+            "name": "Can delete Type", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_incomingmessage", 
+            "name": "Can add incoming message", 
+            "content_type": 39
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_outgoingmessage", 
+            "name": "Can add outgoing message", 
+            "content_type": 40
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_view", 
+            "name": "Can view message logs", 
+            "content_type": 39
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_incomingmessage", 
+            "name": "Can change incoming message", 
+            "content_type": 39
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_outgoingmessage", 
+            "name": "Can change outgoing message", 
+            "content_type": 40
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_incomingmessage", 
+            "name": "Can delete incoming message", 
+            "content_type": 39
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_outgoingmessage", 
+            "name": "Can delete outgoing message", 
+            "content_type": 40
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_incomingmessage", 
+            "name": "Can add incoming message", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_outgoingmessage", 
+            "name": "Can add outgoing message", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_recipient", 
+            "name": "Can add recipient", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_incomingmessage", 
+            "name": "Can change incoming message", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_outgoingmessage", 
+            "name": "Can change outgoing message", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_recipient", 
+            "name": "Can change recipient", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_incomingmessage", 
+            "name": "Can delete incoming message", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_outgoingmessage", 
+            "name": "Can delete outgoing message", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_recipient", 
+            "name": "Can delete recipient", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_pattern", 
+            "name": "Can add pattern", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_pattern", 
+            "name": "Can change pattern", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_pattern", 
+            "name": "Can delete pattern", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_persistantbackend", 
+            "name": "Can add Backend", 
+            "content_type": 37
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_persistantconnection", 
+            "name": "Can add Connection", 
+            "content_type": 38
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_reporter", 
+            "name": "Can add reporter", 
+            "content_type": 36
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_reportergroup", 
+            "name": "Can add Group", 
+            "content_type": 35
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_role", 
+            "name": "Can add role", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_view", 
+            "name": "Can view", 
+            "content_type": 36
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_persistantbackend", 
+            "name": "Can change Backend", 
+            "content_type": 37
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_persistantconnection", 
+            "name": "Can change Connection", 
+            "content_type": 38
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_reporter", 
+            "name": "Can change reporter", 
+            "content_type": 36
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_reportergroup", 
+            "name": "Can change Group", 
+            "content_type": 35
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_role", 
+            "name": "Can change role", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_persistantbackend", 
+            "name": "Can delete Backend", 
+            "content_type": 37
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_persistantconnection", 
+            "name": "Can delete Connection", 
+            "content_type": 38
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_reporter", 
+            "name": "Can delete reporter", 
+            "content_type": 36
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_reportergroup", 
+            "name": "Can delete Group", 
+            "content_type": 35
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_role", 
+            "name": "Can delete role", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_eventschedule", 
+            "name": "Can add event schedule", 
+            "content_type": 33
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_eventschedule", 
+            "name": "Can change event schedule", 
+            "content_type": 33
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_eventschedule", 
+            "name": "Can delete event schedule", 
+            "content_type": 33
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_session", 
+            "name": "Can add session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_session", 
+            "name": "Can change session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_session", 
+            "name": "Can delete session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_site", 
+            "name": "Can add site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_site", 
+            "name": "Can change site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_site", 
+            "name": "Can delete site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_eventlog", 
+            "name": "Can add event log", 
+            "content_type": 32
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_eventtype", 
+            "name": "Can add event type", 
+            "content_type": 31
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_nurse", 
+            "name": "Can add nurse", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_patient", 
+            "name": "Can add patient", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_patientstate", 
+            "name": "Can add patient state", 
+            "content_type": 30
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_site", 
+            "name": "Can add site", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_eventlog", 
+            "name": "Can change event log", 
+            "content_type": 32
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_eventtype", 
+            "name": "Can change event type", 
+            "content_type": 31
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_nurse", 
+            "name": "Can change nurse", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_patient", 
+            "name": "Can change patient", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_patientstate", 
+            "name": "Can change patient state", 
+            "content_type": 30
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_site", 
+            "name": "Can change site", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_eventlog", 
+            "name": "Can delete event log", 
+            "content_type": 32
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_eventtype", 
+            "name": "Can delete event type", 
+            "content_type": 31
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_nurse", 
+            "name": "Can delete nurse", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_patient", 
+            "name": "Can delete patient", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_patientstate", 
+            "name": "Can delete patient state", 
+            "content_type": 30
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_site", 
+            "name": "Can delete site", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "admin", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 1, 
+            "is_staff": 1, 
+            "last_login": "2009-09-07 12:56:53", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$cc94d$3fb9ab08c838564f450acf84bca59ae7192ba299", 
+            "email": "t@t.com", 
+            "date_joined": "2009-09-07 12:56:14"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form.app", 
+        "fields": {
+            "name": "weltel"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form.form", 
+        "fields": {
+            "form_tokens": [
+                10, 
+                11, 
+                12
+            ], 
+            "code": 2, 
+            "apps": [
+                1
+            ], 
+            "name": "register_patient"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "form.form", 
+        "fields": {
+            "form_tokens": [
+                8
+            ], 
+            "code": 5, 
+            "apps": [
+                1
+            ], 
+            "name": "register_nurse"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "well", 
+            "patterns": [
+                1
+            ], 
+            "name": "WelTel Keyword"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "register", 
+            "patterns": [
+                2
+            ], 
+            "name": "register"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "nurse", 
+            "patterns": [
+                5
+            ], 
+            "name": "nurse"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "patient_id", 
+            "patterns": [
+                11
+            ], 
+            "name": "patient_id"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "gender", 
+            "patterns": [
+                15
+            ], 
+            "name": "gender"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "site_code", 
+            "patterns": [
+                12
+            ], 
+            "name": "site_code"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "form.token", 
+        "fields": {
+            "abbreviation": "phone_number", 
+            "patterns": [
+                13
+            ], 
+            "name": "phone_number"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "form.formtoken", 
+        "fields": {
+            "token": 9, 
+            "required": 1, 
+            "sequence": 1
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "form.formtoken", 
+        "fields": {
+            "token": 8, 
+            "required": 0, 
+            "sequence": 2
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "form.formtoken", 
+        "fields": {
+            "token": 10, 
+            "required": 0, 
+            "sequence": 3
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "form.formtoken", 
+        "fields": {
+            "token": 7, 
+            "required": 1, 
+            "sequence": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form.domainform", 
+        "fields": {
+            "form": 1, 
+            "sequence": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "form.domainform", 
+        "fields": {
+            "form": 4, 
+            "sequence": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "form.domain", 
+        "fields": {
+            "code": 1, 
+            "domain_forms": [
+                1, 
+                2
+            ], 
+            "name": "Weltel"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA1-1", 
+            "name": "Weltel Site 1-1", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA2-1", 
+            "name": "Weltel Site 2-1", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA3-1", 
+            "name": "Weltel Site 3-1", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA1-2", 
+            "name": "Weltel Site 1-2", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA2-2", 
+            "name": "Weltel Site 2-2", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA3-2", 
+            "name": "Weltel Site 3-2", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA1-3", 
+            "name": "Weltel Site 1-3", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA2-3", 
+            "name": "Weltel Site 2-3", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "locations.location", 
+        "fields": {
+            "code": "BA3-3", 
+            "name": "Weltel Site 3-3", 
+            "parent": null, 
+            "longitude": null, 
+            "latitude": null, 
+            "type": null
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "(well)", 
+            "name": "well"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "(reg[a-z]*)", 
+            "name": "register"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "(nurse)", 
+            "name": "nurse"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "([a-z]+/[0-9]+)", 
+            "name": "patient_id"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "([a-z0-9]+)", 
+            "name": "site_code"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "(+?[0-9 -]+)", 
+            "name": "phone_number"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "patterns.pattern", 
+        "fields": {
+            "regex": "(m|f|male|female)", 
+            "name": "gender"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 2, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 3, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 4, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 5, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 6, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 7, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 8, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 9, 
+        "model": "weltel.site", 
+        "fields": {}
+    }, 
+    {
+        "pk": 1, 
+        "model": "weltel.patientstate", 
+        "fields": {
+            "code": "default", 
+            "name": "Default", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "weltel.patientstate", 
+        "fields": {
+            "code": "sawa", 
+            "name": "Sawa", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "weltel.patientstate", 
+        "fields": {
+            "code": "shida", 
+            "name": "Shida", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "weltel.patientstate", 
+        "fields": {
+            "code": "other", 
+            "name": "Other", 
+            "description": ""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 2, 
+            "code": "sawa", 
+            "name": "Sawa", 
+            "description": "All's good"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "shida", 
+            "name": "Shida", 
+            "description": "Hardship has come."
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "code": "inactive", 
+            "name": "Inactive", 
+            "description": "Patient is marked inactive."
+        }
+    },
+    {
+        "pk": 4, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "code": "unsubscribed", 
+            "name": "Unsubscribed", 
+            "description": "Patient has unsubscribed."
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "1", 
+            "name": "pain (abdominal)", 
+            "description": "Abdominal pains"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "2", 
+            "name": "pain", 
+            "description": "Generalized body pains"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "3", 
+            "name": "derm", 
+            "description": "Dermatological e.g. itchiness"
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "4", 
+            "name": "headache", 
+            "description": "Headache"
+        }
+    },
+    {
+        "pk": 9, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "5", 
+            "name": "boils", 
+            "description": "Boils"
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "6", 
+            "name": "coughing", 
+            "description": "Coughing"
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "7", 
+            "name": "vomiting", 
+            "description": "Vomiting"
+        }
+    },
+    {
+        "pk": 12, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "8", 
+            "name": "diarrhoea", 
+            "description": "Diarrhoea"
+        }
+    },
+    {
+        "pk": 13, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "9", 
+            "name": "weight", 
+            "description": "Weight gain on some body parts"
+        }
+    },
+    {
+        "pk": 14, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "10", 
+            "name": "other", 
+            "description": "Other"
+        }
+    },
+    {
+        "pk": 15, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "clinic", 
+            "name": "clinic", 
+            "description": "Come to the clinic"
+        }
+    },
+    {
+        "pk": 16, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "referral", 
+            "name": "referral", 
+            "description": "Referred to another clinic/hospital"
+        }
+    },
+    {
+        "pk": 17, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "observe", 
+            "name": "observe", 
+            "description": "Observe the signs/symptoms. If worse, visit a health facility."
+        }
+    },
+    {
+        "pk": 18, 
+        "model": "weltel.eventtype", 
+        "fields": {
+            "next_state": 3, 
+            "code": "drugs", 
+            "name": "drugs",
+            "description": "Pick drugs from the nearest health centre/clinic."
+        }
+    }
+]

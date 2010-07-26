@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <th>School</th>
+        <th>Person</th>
+    </thead>
+    <tbody>
+    {% for headmaster in headmasters %}
+        <tr>
+            <td>{{ headmaster.school }}</td>
+            <td>{{ headmaster }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
