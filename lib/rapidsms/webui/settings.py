@@ -60,7 +60,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.csrf.CsrfResponseMiddleware',
+    #'django.middleware.csrf.CsrfResponseMiddleware',
+    'django.contrib.csrf.middleware.CsrfMiddleware',
 ]
 
 ROOT_URLCONF = "rapidsms.webui.urls"
