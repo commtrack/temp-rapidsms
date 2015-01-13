@@ -118,7 +118,7 @@ class App (rapidsms.app.App):
         # this message requires action if and only if
         # 1. No response is indicated "ok"
         #   "ok" by any app should override any other errors 
-        # 2. Some message is indicated "app error" or "generic errror"
+        # 2. Some message is indicated "app error" or "generic error"
         #   "none" is the default, and we haven't updated every app to correctly
         #   say "ok" on real responses, so only do this for known errors
         to_return = False
